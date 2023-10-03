@@ -6,8 +6,9 @@
   --gray: #C0C0C1;
   --white: #FAF3F3;
   --whiteOpac: #FAF3F3E0;
+  --blue: #A7BED3;
 
-  --std: all .2s ease-in-out;
+  --std: all 0.3s ease-in-out;
 }
 
 body {
@@ -16,12 +17,25 @@ body {
   justify-content: center;
   align-items: center;
   justify-items: center;
+  background-color: var(--blue);
+}
+
+.selector {
+  border: .9rem solid transparent;
+  border-radius: 2.4rem 2.4rem 2.4rem 2.4rem;
+  transition: var(--std);
+}
+
+.selector:hover {
+  border: 1rem solid var(--white);
+  padding: 0.6rem;
+  border-radius: 3rem 3rem 3rem 3rem;
 }
 
 .whole_card {
   display: flex;
   flex-direction: column;
-  border-radius: 2.4rem 2.4rem 2.4rem 2.4rem;
+  border-radius: 3rem 3rem 3rem 3rem;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,.6);
   overflow: hidden;
   
@@ -32,7 +46,6 @@ body {
   box-shadow: 0px 4px 18px 0px rgba(0,0,0,.25);
   border-radius: 1.6rem 1.6rem 1.6rem 1.6rem;
   overflow: hidden;
-
 }
 
 header {
@@ -40,22 +53,18 @@ header {
 }
 
 img {
-  width: 55rem;
+  width: 50rem;
 }
 
 i {
   color: var(--whiteOpac);
   position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 100;
   clip-path:circle();
-  font-size: 10rem;
   
   padding: 1.2%;
   background-color: rgba(0,0,0,0.2);
-
+  
   transition: var(--std);
 }
 
@@ -64,7 +73,24 @@ i:hover {
   cursor: pointer;
 }
 
+#play {
+  font-size: 10rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#plus {
+  font-size: 4rem;
+
+  top: 2%;
+  right: 2%;
+  transform: translate(-2%, 8%);
+}
+
 footer {
+  position: relative;
   padding: 2%;
   background-color: #646165;
   color: var(--gray);
@@ -75,16 +101,22 @@ footer {
 
 footer > *:first-child {
   font-weight: 850;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--white);
 }
 
 footer > *:not(:first-child) {
-  padding-top: 1%;
+  padding-top: 2.2%;
 }
 
 footer > *:last-child {
   padding-top: 2%;
+}
+
+.showInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .descriptors {
